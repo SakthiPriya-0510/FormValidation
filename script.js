@@ -116,8 +116,10 @@ photoInput.addEventListener("change", function(event) {
 
             // Show photo on card
             cardPhoto.src = e.target.result;
+            cardPhoto.style.display = "block";
         };
         reader.readAsDataURL(file); // Convert file to Base64
             
     }
+
 });
