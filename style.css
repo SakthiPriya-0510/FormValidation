@@ -102,7 +102,7 @@ button:hover {
 
 #card {
     width: 550px;
-    height: 270px;
+    height: 390px;
     border-radius: 35px;
     padding: 50px;
     background: white;
@@ -181,3 +181,4 @@ button:hover {
     margin: 0 auto 10px auto;
 
 }
+
