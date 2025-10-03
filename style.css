@@ -1,0 +1,182 @@
+#intro {
+    font-size: 30px;
+}
+
+form {
+    background: #eee2e2;
+    padding: 20px;
+    border-radius: 10px;
+    width: 950px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 40px;
+    color: #e77e88;
+}
+
+label {
+    font-size: 20px;
+}
+
+fieldset {
+    border: 1px solid #9e4242;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 30px;
+    color: #9a69d6;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.d1 label,
+#sp label,
+.form-row label {
+    font-size: 25px;
+    width: 150px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.d1 input {
+    font-size: 20px;
+}
+
+#sp input,
+.form-row input,
+.form-row select,
+.form-row textarea {
+    width: 300px;
+    padding: 5px;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+canvas {
+    border: 1px solid #9e4242;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.btns {
+    text-align: center;
+    margin-top: 15px;
+}
+
+button,
+.btns input {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: bolder;
+}
+
+button {
+    background: #cc7d85;
+}
+
+button:hover {
+    background: #bb96e7;
+}
+
+.btns input[type="submit"] {
+    background: #af9cc7;
+    color: black;
+}
+
+.btns input[type="reset"] {
+    background: #cc7d85;
+    color: black;
+}
+
+#card {
+    width: 550px;
+    height: 350px;
+    border-radius: 35px;
+    padding: 50px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+#card::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    background: #6d4300;
+    border-radius: 50%;
+    opacity: 0.15;
+}
+
+#card h3 {
+    margin: 0;
+    font-size: 30px;
+    color: #6d4300;
+}
+
+#card p {
+    margin: 4px 0;
+    font-size: 25px;
+    color: #333;
+}
+
+.signature-box {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #666;
+}
+
+#signaturePreview {
+    width: 200px;
+    height: 70px;
+    border: 1px solid #999;
+    margin-top: 5px;
+    background: white;
+}
+
+#downloadBtn {
+    margin-top: 15px;
+}
+
+#sp {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+#photoPreview {
+    width: 150px;
+    height: 150px;
+    border-radius: 25%;
+    object-fit: cover;
+    display: none;
+    margin: 10px;
+}
+
+#cPhoto {
+    width: 170px;
+    height: 170px;
+    border-radius: 25%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px auto;
+}

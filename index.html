@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>WELCOME TO STUDENT REGISTRATION</h1>
+    <p id="intro">This assignment is a web-based application that allows students to fill in their information also capture their digital signature using a canvas and then automatically generate a stylish info card. The card can be previewed in real-time and finally
+        downloaded as an image (PNG). It provides a simple way to create digital visiting cards / mini ID cards without needing external software.</p>
+    <section id="s1">
+        <center>
+            <h1><br><br> Student Registration form</h1>
+        </center>
+        <form id="regForm">
+
+            <fieldset id="fs1">
+                <legend>Personal information</legend>
+                <div>
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required><br><br>
+                    </div>
+                    <div class="form-row">
+                        <label for="dob ">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required><br><br>
+                    </div>
+                    <div class="d1"> <label>Gender</label>
+                        <label><input type="radio" name="gender" value="Male" required> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                        <label><input type="radio" name="gender" value="Other"> Other</label><br><br>
+
+                        <label for="hobbies">Select your hobbies</label><br>
+                        <label><input type="checkbox" name="hobbies" value="Reading"> Reading</label><br>
+                        <label><input type="checkbox" name="hobbies" value="Sports"> Sports</label><br>
+                        <label><input type="checkbox" name="hobbies" value="Music"> Music</label><br>
+                        <label><input type="checkbox" name="hobbies" value="Traveling"> Traveling</label><br>
+                        <label><input type="checkbox" name="hobbies" value="Gaming"> Gaming</label><br>
+                        <label><input type="checkbox" name="hobbies" value="Other"> Other:</label>
+                        <input type="text" name="otherHobby" placeholder="Enter your hobby">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset id="fs2">
+                <legend>Contact Information</legend>
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required><br>
+                </div>
+                <div class="form-row">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required><br>
+                </div>
+                <div class="form-row">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="3"></textarea><br>
+                </div>
+                <div class="form-row">
+                    <label for="pincode">PinCode</label>
+                    <input type="tel" id="pincode" name="pincode" required><br>
+                </div>
+            </fieldset>
+            <fieldset id="fs3">
+                <legend>Academic Information</legend>
+                <div class="form-row">
+                    <label for="course">Course</label>
+                    <select id="course" name="course" required>
+        <option value=" ">--Select--</option>
+        <option value="Computer Science">CSE</option>
+        <option value="Electrical and Electronics">EEE</option>
+        <option value="Electronics and Communication">ECE</option>
+        <option value="Electronics and Instrumentation">E&I</option>
+        <option value="Mechanical">Mech</option>
+        <option value="Civil">Civil</option>
+      </select><br>
+                </div>
+                <div class="form-row">
+                    <label for="year">Year of Study</label>
+                    <input type="r" id="year" name="year" min="1" max="4" required><br>
+                </div>
+            </fieldset>
+            <fieldset id="fs4">
+                <legend>Signature and Photo</legend>
+                <div id="sp">
+                    <div>
+                        <canvas id="signature" width="300" height="100"></canvas><br>
+                        <button type="button" onclick="clearSignature()">Clear Signature</button><br><br>
+                    </div>
+                    <div>
+                        <label for="photo">Select Photo:</label>
+                        <input type="file" id="photo" accept="image/*"><br>
+                        <img id="photoPreview" alt="PhotoPreview"></div>
+                </div>
+            </fieldset>
+            <div class="btns">
+                <input type="submit" value="Register">
+                <input type="reset" value="Clear">
+            </div>
+        </form>
+        <br>
+    </section>
+    <section id="s2">
+        <h1>PREVIEW CARD</h1>
+        <div id="card">
+            <div>
+                <h3 id="cName">Student Name</h3>
+                <p id="cDOB">yyyy/mm/dd</p>
+                <p id="cGender">Male/Female</p>
+                <p id="cCourse">Course</p>
+                <p id="cEmail">student@email.com</p>
+                <p id="cPhone">1234567890</p>
+                <p>Hobbies:
+                    <p id="cHob">x,y</p>
+                </p>
+                <div class="signature-box">
+                    <p>Signature:</p>
+                    <img id="signaturePreview" alt="Signature">
+                </div>
+            </div>
+            <div>
+                <img id="cPhoto" alt="Student Photo">
+                <div class="Address-box">
+                    <p>Address:</p>
+                    <p id="cAdd">Dno, Street, City, District.</p>
+                    <p id="cPin">nnn nnn</p>
+                </div>
+
+            </div>
+        </div>
+        <button id="downloadBtn" onclick="downloadCard()">Download Card</button>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+</body>
+
+</html>
