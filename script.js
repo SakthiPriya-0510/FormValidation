@@ -66,8 +66,7 @@ document.getElementById("regForm").addEventListener("submit", function(event) {
     const minAge = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate())
     if (birthDate > today) {
         alert(`Date of birth cannot be in future`);
-    }
-    if (birthDate > minAge) {
+    }else if (birthDate > minAge) {
         alert(`You must be atleast 18 years old`);
     }
 
@@ -78,6 +77,7 @@ document.getElementById("regForm").addEventListener("submit", function(event) {
     if (!pin_regex.test(pincode)) {
         alert(`Please enter valid pincode in the format nnn nnn`)
     }
+    if(year<1 || year>4){alert(`Please enter year between 1 and 4`)} 
 
 
     // Update preview card
@@ -123,3 +123,4 @@ photoInput.addEventListener("change", function(event) {
     }
 
 });
+
